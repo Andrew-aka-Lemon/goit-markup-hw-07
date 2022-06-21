@@ -1,4 +1,20 @@
+@import "utils/variables";
+@import "utils/normalise";
+@import "utils/reset";
+@import "utils/fonts";
+@import "utils/container";
+@import "utils/visually-hidden";
+
+
+@import "components/header";
+
+.section {
+  padding-bottom: 94px;
+}
 
 .gallery-section {
   padding-top: 94px;
 }
+@import "components/portfolio/filter-btn";
+@import "components/portfolio/gallery";
+@import "components/footer";

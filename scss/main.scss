@@ -1,3 +1,20 @@
+@import "utils/variables";
+@import "utils/normalise";
+@import "utils/reset";
+@import "utils/fonts";
+@import "utils/container";
+@import "utils/visually-hidden";
+
 .section {
   padding-bottom: 94px;
 }
+
+@import "components/header";
+@import "components/studio/hero";
+@import "components/studio/what-do-we-do";
+@import "components/studio/preferences";
+@import "components/studio/out-team";
+@import "components/studio/our-clients";
+@import "components/footer";
+
+@import "components/modal";
