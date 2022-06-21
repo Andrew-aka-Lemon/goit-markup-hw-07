@@ -1,0 +1,28 @@
+.list {
+  list-style: none;
+  margin: 0;
+}
+
+.link {
+  text-decoration: none;
+}
+
+
+
+/* agent Styles reset */
+body,
+h1,
+h2,
+h3,
+ul,
+ol,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+/* ---Бесит черній аутлайн при фокусе, глобально убираем--- */
+
+* {
+  outline: none;
+}
