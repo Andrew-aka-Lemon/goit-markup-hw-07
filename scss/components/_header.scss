@@ -16,15 +16,46 @@
 .navigation {
   display: flex;
   align-items: center;
+
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 50px;
+  }
+
+  &__link {
+    color: var(--text-color-main);
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: var(--cubic-function);
+
+    &:hover,
+    &:focus {
+      color: var(--text-colot-accent);
+      cursor: pointer;
+    }
+  }
 }
 
-.navigation__list {
-  display: flex;
-  align-items: center;
-}
+// хотів би вкласти в .navigation, але сказали макс 2 вкладеності =(
+.navigation__link--current-page {
+  color: var(--text-colot-accent);
+  position: relative;
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -33px;
 
-.navigation__item:not(:last-child) {
-  margin-right: 50px;
+    width: 100%;
+    height: 4px;
+    background-color: var(--btn-color-social-focus);
+    border-radius: 2px;
+  }
 }
 
 .logo {
@@ -34,75 +65,54 @@
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
-  margin-right: 93px;
-}
-.logo-accent {
-  color: var(--text-colot-accent);
+
+  &--rm {
+    margin-right: 93px;
+  }
+
+  &--accent {
+    color: var(--text-colot-accent);
+  }
 }
 
-.header-nav-link,
-.header-contacts {
-  color: var(--text-color-main);
+.navigation,
+.contacts {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
 
-.header-nav-link {
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: var(--cubic-function);
-}
-
-.header-contacts {
+.contacts {
   display: flex;
   margin-left: auto;
   align-items: center;
+
+  &__item:not(:last-child) {
+    margin-right: 50px;
+  }
+
+  &__link {
+    color: var(--text-color-secondary);
+
+    display: flex;
+    align-items: center;
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: var(--cubic-function);
+
+    &:hover,
+    &:focus {
+      color: var(--text-colot-accent);
+      cursor: pointer;
+    }
+  }
+
+  &__icon {
+    margin-right: 10px;
+    fill: currentColor;
+  }
 }
 
-.header-nav-link:focus,
-.contacts-link:focus,
-.header-nav-link:hover,
-.contacts-link:hover {
-  color: var(--text-colot-accent);
-  cursor: pointer;
-}
 
-.current-page {
-  color: var(--text-colot-accent);
-  position: relative;
-}
-
-.current-page::after {
-  content: "";
-  display: block;
-  position: absolute;
-  bottom: -33px;
-
-  width: 100%;
-  height: 4px;
-  background-color: var(--btn-color-social-focus);
-  border-radius: 2px;
-}
-
-.contacts-link {
-  color: var(--text-color-secondary);
-
-  display: flex;
-  align-items: center;
-
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: var(--cubic-function);
-}
-
-.header-contacts-item:not(:last-child) {
-  margin-right: 50px;
-}
-
-.icon-smartphone,
-.icon-envelope {
-  margin-right: 10px;
-  fill: currentColor;
-}
