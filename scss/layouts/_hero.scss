@@ -32,29 +32,8 @@
   text-transform: uppercase;
 }
 
-.hero-btn {
+.btn--hero {
   margin-right: auto;
-  margin-left: auto;
-  min-width: 200px;
-  min-height: 50px;
-
-  font-weight: 700;
-  color: var(--text-color-alt);
-  background-color: var(--text-colot-accent);
-  cursor: pointer;
-  padding: 10px 32px;
-  border: none;
-  border-radius: 4px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-color: var(--text-colot-accent);
-
-  transition-property: background-color;
-  transition-duration: 250ms;
-  transition-timing-function: var(--cubic-function);
-}
-
-.hero-btn:focus,
-.hero-btn:hover {
-  background-color: var(--btn-color-focus);
+  margin-left: auto;  
 }
 
