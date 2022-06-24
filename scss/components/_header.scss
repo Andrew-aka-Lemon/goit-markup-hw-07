@@ -13,17 +13,17 @@
   border-bottom: 1px solid #ececec;
 }
 
-.header-nav {
+.navigation {
   display: flex;
   align-items: center;
 }
 
-.header-nav-list {
+.navigation__list {
   display: flex;
   align-items: center;
 }
 
-.header-nav-item:not(:last-child) {
+.navigation__item:not(:last-child) {
   margin-right: 50px;
 }
 
