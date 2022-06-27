@@ -880,7 +880,6 @@ body {
   visibility: hidden;
   pointer-events: none;
 }
-
 .backdrop.is-hidden .modal-window {
   -webkit-transform: translate(-50%, -150%);
           transform: translate(-50%, -150%);
@@ -911,6 +910,15 @@ body {
           transition-duration: 750ms;
   -webkit-transition-timing-function: cubic-bezier(0, 0.99, 1, 0.99);
           transition-timing-function: cubic-bezier(0, 0.99, 1, 0.99);
+}
+.modal-window__header {
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--text-color-main);
 }
 
 .close-modal-btn {
@@ -948,19 +956,8 @@ body {
   cursor: pointer;
   color: var(--btn-color-social-focus);
 }
-
 .close-modal-btn__icon {
   fill: currentColor;
-}
-
-.modal-window__header {
-  margin-bottom: 12px;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 23px;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: var(--text-color-main);
 }
 
 .modal-input__name {

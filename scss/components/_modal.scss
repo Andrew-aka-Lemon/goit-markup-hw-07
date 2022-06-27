@@ -20,18 +20,16 @@
     1,
     0.99
   );
-&.is-hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-
-}
-}
-
-.backdrop.is-hidden .modal-window {
-  transform: translate(-50%, -150%);
-  opacity: 0;
-  visibility: hidden;
+  &.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    & .modal-window {
+      transform: translate(-50%, -150%);
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
 }
 
 .modal-window {
@@ -39,6 +37,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
   opacity: 1;
   visibility: visible;
 
@@ -60,6 +59,17 @@
     1,
     0.99
   );
+
+  &__header {
+    margin-bottom: 12px;
+
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--text-color-main);
+  }
 }
 
 .close-modal-btn {
@@ -84,26 +94,16 @@
   transition-duration: 250ms;
   transition-timing-function: var(--cubic-function);
 
-  &:hover, &:focus {
-  transform: translate(-2%, -2%);
-  cursor: pointer;
-  color: var(--btn-color-social-focus);
-}
-}
+  &:hover,
+  &:focus {
+    transform: translate(-2%, -2%);
+    cursor: pointer;
+    color: var(--btn-color-social-focus);
+  }
 
-.close-modal-btn__icon {
-  fill: currentColor;
-}
-
-.modal-window__header {
-  margin-bottom: 12px;
-
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 23px;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: var(--text-color-main);
+  &__icon {
+    fill: currentColor;
+  }
 }
 
 .modal-input__name {
@@ -205,14 +205,17 @@
   transition: border-color 250ms var(--cubic-function);
 }
 
-.modal-input__privacy-input:checked + .modal-input__privacy-text::before {
+.modal-input__privacy-input:checked
+  + .modal-input__privacy-text::before {
   border: none;
   background-color: var(--btn-color-social-focus);
   background-image: url(../images/icon/icon-check.svg);
 }
 
-.modal-input__privacy-input:focus + .modal-input__privacy-text::before,
-.modal-input__privacy-input:hover + .modal-input__privacy-text::before {
+.modal-input__privacy-input:focus
+  + .modal-input__privacy-text::before,
+.modal-input__privacy-input:hover
+  + .modal-input__privacy-text::before {
   border-color: var(--btn-color-focus);
 }
 
@@ -234,7 +237,7 @@
   transform: translateY(-2px);
 }
 
-.btn--submit-modal{
+.btn--submit-modal {
   margin: 0 auto;
   padding: 10px 55px;
 
@@ -243,8 +246,9 @@
 
   letter-spacing: 0.06em;
 
-  &:hover, &:focus {
-  background-color: var(--btn-color-focus);
-  cursor: pointer;
-}
+  &:hover,
+  &:focus {
+    background-color: var(--btn-color-focus);
+    cursor: pointer;
+  }
 }
